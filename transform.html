@@ -4,16 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Transform And Translate</title>
+    <style>
+        .container, .inner{
+            width: 200px;
+            height: 200px;
+        }
+        .container{
+            border: 2px solid steelblue;
+            background-color: aquamarine;
+            /* transform: translate(30px, 50px); */
+            /* transform: translate3d(50px, 30px , 10px); */
+
+        }
+        .inner{
+            border: 2px solid brown;
+            background-color: palegoldenrod;
+            /* transform: scale(0.5, 0.25); */
+            /* transform: rotate(-45deg); */
+            /* transform: translate(30px, 50px); */
+            /* transform: translate3d(50px , 30px , 20px); */
+            /* transform: translate(20px, 30px) rotate(45deg) scale(0.75) ; */
+        }
+        /* .inner:hover{
+            transform: translate(30px , 20px) rotate(20deg) scale(0.75) skew(-20deg, -30deg) ;
+        } */
+    </style>
 </head>
 <body>
     <h2>Explore Transform and translate in css</h2>
-    <div class="container">Container 1
+    <div class="container">
         <div class="inner">Inner 1</div>
     </div>
-    <div class="container">Container 2
+    <div class="container">
         <div class="inner">Inner 2</div>
     </div>
-    <div class="container">Container 3
+    <div class="container">
         <div class="inner">Inner 3</div>
     </div>
 </body>
