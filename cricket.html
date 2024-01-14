@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cricket It</title>
+    <style>
+        .field{
+            border: 1px solid steelblue;
+        }
+        .bat{
+            transition: transform 500ms;
+        }
+        .field:hover .bat{
+            transform: rotate(-60deg);
+            transform-origin: top right;
+        }
+        .field:hover .ball{
+            transform: translate(1000px, -500px);
+        }
+        .ball{
+            height:20px;
+            width: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            margin-left: 320px;
+            margin-top: -70px;
+            transition: transform 3s ease-out 500ms;
+        }
+    </style>
 </head>
 <body>
     <div class="field">
         <img src="download.jpg" alt="bat image" class="bat">
+        <div class="ball"></div>
     </div>
 </body>
 </html>
