@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transition</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid tomato;
+            background-color: peachpuff;
+            /* transition: width 5s linear 2s, background-color 5s linear 1s; */
+            transition: transform 2s ease-in-out 1s;
+        }
+        .box:hover{
+            /* width: 400px;
+            background-color: red; */
+            transform: rotate(45deg) scale(1.5) translate(100px);
+        }
+    </style>
 </head>
 <body>
     <ul>
@@ -11,5 +26,8 @@
         <li>Translate: it is a value of the transform style rule. it means you move either x or y axix</li>
         <li>Transition : how long it will take to do the change of the shape or color</li>
     </ul>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
 </body>
 </html>
