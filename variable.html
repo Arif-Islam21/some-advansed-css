@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css Variable</title>
     <style>
+        :root{
+            --primary-color: tomato;
+            --secondary-color: brown;
+            --font-size: 20px;
+        }
         h2{
-            color: steelblue;
+            color: var(--primary-color);
         }
         h5{
-            background-color: steelblue;
+            background-color: var(--primary-color);
         }
         .box{
-            border: 2px solid steelblue;
+            border: 2px solid var(--primary-color);
         }
-
+        .box p{
+            color: var(--primary-color);
+            font-size: var(--font-size);
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 200px calc(100% - 200px - 20px);
+            gap: 20px;
+        }
+        .sidebar{
+            background-color: lightgray;
+        }
+        .content{
+            background-color: lightblue;
+        }
     </style>
 </head>
 <body>
@@ -23,6 +42,10 @@
     <div class="box">
         <h3>I am doing Something</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam expedita at sapiente debitis, repellat minus voluptates? Et dolorem deserunt, vel sapiente ducimus nostrum nulla iure aut fugit fugiat ipsa totam?</p>
+    </div>
+    <div class="container">
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Main Content</div>
     </div>
 </body>
 </html>
